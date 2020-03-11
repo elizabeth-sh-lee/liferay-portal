@@ -4789,7 +4789,6 @@ input.switch:empty ~ .switch-bar .switch-toggle:before {
 /* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
 
 header {
-  background-color: red;
   position: fixed;
   z-index: 1;
   width: 100vw;
@@ -4819,6 +4818,7 @@ header li.nav-item:hover a {
 header li.nav-item:hover ul.child-menu {
   background-color: rgba(73, 73, 73, 0.349);
   display: block;
+  margin-top: -10px;
 }
 
 header li.nav-item.selected {
@@ -4895,21 +4895,14 @@ header li.selected a.nav-link {
 }
 
 .welcome_container {
-  display: flex;
   color: white;
   width: 100vw;
   height: 100vh;
-  flex-direction: column;
-  max-width: 100%;
-  background-color: pink;
-}
-
-.welcome_content {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
 }
 
 .description_container {
@@ -4930,20 +4923,35 @@ h {
 }
 
 .welcome_footer {
-  display: flex;
+  background-color: orange;
   width: 100vw;
+  display: flex;
   justify-content: space-between;
-  max-width: 100%;
+  align-self: flex-end;
 }
 
 body {
-  background-color: blue;
   background-image: url(../images/main-background.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
+}
+
+body a.btn-orange {
+  background-color: #dfa356;
+  margin-left: 5px;
+}
+
+body a.btn-orange:hover {
+  color: #D6A261;
+}
+
+@media (max-width: 767.98px) {
+  body a.btn-orange {
+    width: 100%;
+  }
 }
 
 body .button-beige {
